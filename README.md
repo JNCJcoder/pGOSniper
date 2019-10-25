@@ -4,7 +4,13 @@ Aplicativo criado em react-native para fins de aprendizado. o aplicativo se cone
 
 ## Motivação
 
-Meu primeiro aplicativo criado usando react-native, a ideia principal de sua criação foi aprender mais sobre React-native e desenvolver na prática um aplicativo util para meus amigos e colegas "Voadores".
+Meu primeiro aplicativo criado usando react-native, a ideia principal de sua criação foi aprender mais sobre React-native e desenvolver na prática um aplicativo util para meus amigos e colegas "Voadores", e junto divulgar mais o trabalho feito pelos usuarios do subreddit /r/PokemonGoSniping/.
+
+## Colabore
+
+Colabore com o /r/PokemonGoSniping/, quando achar um pokemon 100% em sua jogatina, crie um tópico lá com o IV, Level e nome do pokemon no titulo do tópico e coloque na descrição a coordenada exata aonde ele esta.
+
+Link: https://www.reddit.com/r/PokemonGoSniping/new/
 
 ## Problemas Conhecidos
 
