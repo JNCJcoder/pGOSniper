@@ -2,9 +2,11 @@
 
 Aplicativo criado em react-native para fins de aprendizado. o aplicativo se conecta na API do Reddit(usando o AXIOS) e pega os tópicos do subreddit /r/PokemonGoSniping/ e os organiza dentro de uma lista contendo o titulo do topico(IV/LEVEL  NOME DO POKEMON), o autor do tópico, o horario de criação e logo embaixo a descrição do tópico e as coordenadas(junto a um botão de copiar).
 
-## Motivação
+## Propósito
 
-Meu primeiro aplicativo criado usando react-native, a ideia principal de sua criação foi aprender mais sobre React-native e desenvolver na prática um aplicativo util para meus amigos e colegas "Voadores", e junto divulgar mais o trabalho feito pelos usuarios do subreddit /r/PokemonGoSniping/.
+Meu primeiro aplicativo criado usando react-native, a ideia principal de sua criação foi aprender mais sobre react-native e desenvolver na prática um aplicativo util para meus amigos e colegas "voadores", e junto divulgar mais o trabalho feito pelos usuarios do subreddit /r/PokemonGoSniping/.
+
+De uma olhada na parte "Informações" para mais detalhes do aplicativo.
 
 ## Colabore
 
@@ -39,6 +41,12 @@ Link: https://www.reddit.com/r/PokemonGoSniping/new/
 	* react-navigation-stack
 	* react-native-gesture-handler
 
+* Foi usado:
+	* AJAX
+	* Flexbox
+	* MomentJS / react-moment
+	* Flatlist
+
 ## Histórico de lançamentos
 
 * 0.0.1
@@ -51,6 +59,3 @@ Link: https://www.reddit.com/r/PokemonGoSniping/new/
 3. Faça o _commit_ (`git commit -am 'Add some fooBar'`)
 4. _Push_ (`git push origin feature/fooBar`)
 5. Crie um novo _Pull Request_
-
-
-
