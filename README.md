@@ -27,6 +27,11 @@ Link: https://www.reddit.com/r/PokemonGoSniping/new/
 * Pokemons que já sumiram (mais de 1 hora) continuam na lista.
 	* Estou olhando uma forma de excluir da lista tópicos criados a mais de 1 hora.
 
+## Download
+
+* Android: 
+* IOS: (Ainda precisa ser compilado para ios)
+
 ## Informações
 
 > Não consegui usar a ultima versão LTS do NodeJS, o aplicativo foi feito na versão v12.4.0 do NodeJS.
@@ -40,14 +45,24 @@ Link: https://www.reddit.com/r/PokemonGoSniping/new/
 	* react-navigation
 	* react-navigation-stack
 	* react-native-gesture-handler
+	* @react-native-community/async-storage
+	* @react-native-community/netinfo
 
 * Foi usado:
 	* AJAX
 	* Flexbox
 	* MomentJS / react-moment
 	* Flatlist
+	* Offline First
 
 ## Histórico de lançamentos
+
+* 0.0.2
+	* Estrutura do StyleSheet arrumado.
+	* Correção na estrutura do Sobre.
+	* FlexBox melhor implementado.
+	* StyleSheet para modo Escuro preparada.
+	* Usa ultima lista baixada quando sem internet.
 
 * 0.0.1
     * Versão experimental lançada.

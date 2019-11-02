@@ -3,45 +3,44 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		padding: 20,
-		backgroundColor: "#FAFAFA",
+		textAlign: "center",
+		alignItems: "center",
+		backgroundColor: "#FAFAFA"
 	},
 	tituloText: {
-		flex: 1,
+		flex: 0,
 		fontSize: 32,
-		fontWeight: "bold",
-		textAlign: "center",
-		alignItems: "center"
+		fontWeight: "bold"
 	},
 	versaoText: {
 		flex: 1,
-		fontSize: 20,
-		marginBottom: 180,
+		fontSize: 20
+	},
+	infoContainer: {
+		flex: 4,
 		textAlign: "center",
-		alignItems: "center"
+		alignItems: "center",
+		width: "90%"
 	},
 	infoText: {
-		flex: 1,
-		fontSize: 20,
+		width: "89%",
 		textAlign: "center",
-		alignItems: "center"
+		fontSize: 20
 	},
 	subredditText: {
-		flex: 1,
+		justifyContent: "center",
 		fontSize: 24,
 		fontWeight: "bold",
-		color: "#00F",
-		textAlign: "center",
-		alignItems: "center"
+		color: "#00F"
 	},
-	jsonText: {
+	jsonText: { 
+		fontSize: 17
+	},
+	endContainer: {
 		flex: 1,
-		fontSize: 17,
-		textAlign: "center",
-		alignItems: "center"
+		justifyContent: "center"
 	},
 	endText: {
-		flex: 0,
 		fontSize: 16,
 		fontWeight: "bold"
 	}
