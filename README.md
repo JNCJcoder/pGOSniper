@@ -29,8 +29,10 @@ Link: https://www.reddit.com/r/PokemonGoSniping/new/
 
 ## Download
 
-* Android: 
-* IOS: (Ainda precisa ser compilado para ios)
+Download: https://github.com/drawciamage/pGOSniper/releases
+
+* Android: Lançado.
+* IOS: Ainda precisa ser compilado para ios, sem planos no momento.
 
 ## Informações
 
