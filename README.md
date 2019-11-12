@@ -2,6 +2,8 @@
 
 Aplicativo criado em react-native para fins de aprendizado. o aplicativo se conecta na API do Reddit(usando o AXIOS) e pega os tópicos do subreddit /r/PokemonGoSniping/ e os organiza dentro de uma lista contendo o titulo do topico(IV/LEVEL  NOME DO POKEMON), o autor do tópico, o horario de criação e logo embaixo a descrição do tópico e as coordenadas(junto a um botão de copiar).
 
+![Alt text](img.png?raw=true)
+
 ## Propósito
 
 Meu primeiro aplicativo criado usando react-native, a ideia principal de sua criação foi aprender mais sobre react-native e desenvolver na prática um aplicativo util para meus amigos e colegas "voadores", e junto divulgar mais o trabalho feito pelos usuarios do subreddit /r/PokemonGoSniping/.
