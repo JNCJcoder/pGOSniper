@@ -29,6 +29,8 @@ Link: https://www.reddit.com/r/PokemonGoSniping/new/
 
 ## Download
 
+> Versão experimental
+
 Download: https://github.com/drawciamage/pGOSniper/releases
 
 * Android: Lançado.
@@ -38,12 +40,15 @@ Download: https://github.com/drawciamage/pGOSniper/releases
 
 > Não consegui usar a ultima versão LTS do NodeJS, o aplicativo foi feito na versão v12.4.0 do NodeJS.
 
+> Informações riscadas foram removidas. 
+
 * Dependencias
 	* axios
-	* moment
+	* ~moment~
+	* date-fns
 	* react
 	* react-native
-	* react-moment
+	* ~react-moment~
 	* react-navigation
 	* react-navigation-stack
 	* react-native-gesture-handler
@@ -53,11 +58,24 @@ Download: https://github.com/drawciamage/pGOSniper/releases
 * Foi usado:
 	* AJAX
 	* Flexbox
-	* MomentJS / react-moment
+	* ~MomentJS / react-moment~
+	* date-fns
 	* Flatlist
 	* Offline First
+	* Tema Claro/Escuro
 
 ## Histórico de lançamentos
+
+* 0.0.4
+	* Adicionado Mensagem de primeiro uso.
+	* MomentJS / react-moment trocado pelo date-fns.
+	* Tema escuro com cores mais fracas.
+	* Botão de mudar tema centralizado.
+
+* 0.0.3
+	* Adicionado Tema Escuro.
+	* Adicionado Botão para mudar tema.
+	* O Tema escolhido é lembrado.
 
 * 0.0.2
 	* Estrutura do StyleSheet arrumado.

@@ -2,35 +2,27 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
 	sobreText: {
-		color: "#FFF",			// Light
-		//color: "#000",		// Dark
+		color: "#FFF",
 		fontWeight: "bold"
 	},
 	
 	container: {
 		flex: 1,
-		backgroundColor: "#FAFAFA"			// Light
-		//backgroundColor: "#121212",		// Dark
 	},
 	list: {
 		padding: 5,
 		justifyContent: "center",
 	},
 	topicContainer: {
-		backgroundColor: "#FFF",		// Light
-		//backgroundColor: "#151515",	// Dark
 		borderRadius: 5,
 		borderWidth: 1,
-		borderColor: "#DDD",	// Light
-		//borderColor: "#111",	// Dark
+		borderColor: "#DDD",
 		padding: 15,
 		marginBottom: 15
 	},
 	topicTitle: {
 		fontSize: 18,
 		fontWeight: "bold",
-		color: "#333" // Light
-		//color: "#FFF"	// Dark	
 	},
 	infoContainer: {
 		flexDirection: "row"
@@ -40,8 +32,6 @@ const styles = StyleSheet.create({
 	},
 	topicDescription: {
 		fontSize: 16,
-		color: "#999",		// Light
-		//color: "#F5F5F5",	// Dark
 		marginTop: 5,
 		lineHeight: 24
 	},

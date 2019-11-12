@@ -1,6 +1,6 @@
 {
   "name": "pGOSniper",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -13,9 +13,8 @@
     "@react-native-community/async-storage": "^1.6.2",
     "@react-native-community/netinfo": "^4.4.0",
     "axios": "^0.19.0",
-    "moment": "^2.24.0",
+    "date-fns": "^2.7.0",
     "react": "16.9.0",
-    "react-moment": "^0.9.6",
     "react-native": "0.61.2",
     "react-native-gesture-handler": "^1.4.1",
     "react-navigation": "^4.0.10",
