@@ -16,13 +16,14 @@ export default class Main extends Component {
 
 	state = {
 		darktheme: "false",
+		hournow: new Date(),
 		children: [],
 	};
 
 	componentDidMount() {
 		this.firstTime();
-		NetInfo.fetch().then(sTate => {
-			if(sTate.isConnected){ this.loadTopics(); } 
+		NetInfo.fetch().then(state => {
+			if(state.isConnected){ this.loadTopics(); } 
 			else { this.loadStorage(); }
 		});
 	}
@@ -44,8 +45,7 @@ export default class Main extends Component {
 	};
 
 	loadStorage = async () => { 
-		const result = await AsyncStorage.getItem('@topics');
-		const response = JSON.parse(result);
+		const response = JSON.parse(await AsyncStorage.getItem('@topics'));
 
 		const { children } = response.data.data;
 
@@ -55,7 +55,6 @@ export default class Main extends Component {
 	};
 
 	loadTopics = async () => {
-		await AsyncStorage.removeItem('@topics');
 		const response = await axios.get('https://www.reddit.com/r/PokemonGoSniping/new.json?sort=new&limit=5');
 
 		const { children } = response.data.data; 
@@ -69,8 +68,7 @@ export default class Main extends Component {
 			<Text style={[styles.topicTitle, {color: this.state.darktheme ? "#7a7a7a" : "#333"}]}>{item.data.title}</Text>
 			<View style={styles.infoContainer}>
 				<Text style={[styles.topicAuthor, {color: this.state.darktheme ? "#7a7a7a" : "#333"}]}>Publicado por: {item.data.author} </Text>
-				
-				<Text style={[styles.topicAuthor, {color: this.state.darktheme ? "#7a7a7a" : "#333"}]}>a { formatDistance(new Date(fromUnixTime(item.data.created_utc)), new Date(), { locale: pt }) } atrás</Text>
+				<Text style={[styles.topicAuthor, {color: this.state.darktheme ? "#7a7a7a" : "#333"}]}>a { formatDistance(new Date(fromUnixTime(item.data.created_utc)), this.state.hournow, { locale: pt }) } atrás</Text>
 			</View>
 			<Text style={[styles.topicDescription, {color: this.state.darktheme ? "#7a7a7a" : "#999"}]}>{item.data.selftext.split("/n")[0]}</Text>
 			<View style={styles.coordsContainer}>
@@ -90,7 +88,7 @@ export default class Main extends Component {
 				<FlatList
 				contentContainerStyle={styles.list}
 				data={this.state.children}
-				keyExtractor={item => item.data.selftext}
+				keyExtractor={item => String(item.data.created_utc)}
 				renderItem={this.renderItem}
 				/>
 			</View>

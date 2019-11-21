@@ -2,7 +2,7 @@
 
 Aplicativo criado em react-native para fins de aprendizado. o aplicativo se conecta na API do Reddit(usando o AXIOS) e pega os tópicos do subreddit /r/PokemonGoSniping/ e os organiza dentro de uma lista contendo o titulo do topico(IV/LEVEL  NOME DO POKEMON), o autor do tópico, o horario de criação e logo embaixo a descrição do tópico e as coordenadas(junto a um botão de copiar).
 
-![Alt text](img.png?raw=true)
+![imagem](img.png?raw=true)
 
 ## Propósito
 
@@ -67,6 +67,12 @@ Download: https://github.com/drawciamage/pGOSniper/releases
 	* Tema Claro/Escuro
 
 ## Histórico de lançamentos
+
+* 0.0.5
+	* Melhorias minimas na performance.
+	* Date() agora e iniciado apenas uma vez.
+	* Corrigido problema no KeyExtractor.
+	* Removido codigo de teste colocado na "versão 0.0.3".
 
 * 0.0.4
 	* Adicionado Mensagem de primeiro uso.
