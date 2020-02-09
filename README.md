@@ -18,9 +18,9 @@ Link: https://www.reddit.com/r/PokemonGoSniping/new/
 
 ## Problemas Conhecidos
 
-* Coordenadas deixadas apenas nos comentarios não aparecem no aplicativo.
+~* Coordenadas deixadas apenas nos comentarios não aparecem no aplicativo.
   * Não aparecem pois o aplicativo apenas pega o nome do tópico, descrição, autor e o horario(em Unix Timestamp).
-  * Tentei de tudo para pegar o primeiro comentario dos tópicos, mas não obtive sucesso.
+  * Tentei de tudo para pegar o primeiro comentario dos tópicos, mas não obtive sucesso.~ RESOLVIDO.
 
 * A Lista não atualiza sozinha, sendo necessario abrir novamente o aplicativo.
   * Ainda estou aprendendo sobre react-native e tentarei melhorar isso.
@@ -48,6 +48,7 @@ Download: https://github.com/drawciamage/pGOSniper/releases
   * axios
   * ~moment~
   * date-fns
+  * prop-types
   * react
   * react-native
   * ~react-moment~
@@ -65,8 +66,18 @@ Download: https://github.com/drawciamage/pGOSniper/releases
   * Flatlist
   * Offline First
   * Tema Claro/Escuro
+  * Componentes (Flatlist)
 
 ## Histórico de lançamentos
+
+* 0.0.7
+  * Leve Melhoria de Desempenho.
+  * Dependencias Atualizadas.
+  * Imagem do README.md Atualizada.
+  * A Flatlist dos "Topicos" agora e um Componente.
+  * Consertado as Coordenadas, agora são pegas dos Comentarios do Subreddit.
+  * Adicionado Prop-types.
+  * Removido paddingBottom do container da Flatlist.
 
 * 0.0.6
   * Dependências atualizadas.

@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingBottom: 0,
+    paddingBottom: 10,
     paddingHorizontal: 10,
   },
   sobreText: {

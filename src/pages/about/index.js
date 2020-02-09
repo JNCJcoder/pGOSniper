@@ -7,7 +7,7 @@ const About = () => (
   <View style={styles.container}>
     <View>
       <Text style={[styles.tituloText, styles.boldText]}>pGO Sniper</Text>
-      <Text style={styles.infoText}>Versão 0.0.5</Text>
+      <Text style={styles.infoText}>Versão 0.0.7</Text>
     </View>
     <View style={styles.infoContainer}>
       <Text style={styles.infoText}>
