@@ -18,9 +18,9 @@ Link: https://www.reddit.com/r/PokemonGoSniping/new/
 
 ## Problemas Conhecidos
 
-~* Coordenadas deixadas apenas nos comentarios não aparecem no aplicativo.
-  * Não aparecem pois o aplicativo apenas pega o nome do tópico, descrição, autor e o horario(em Unix Timestamp).
-  * Tentei de tudo para pegar o primeiro comentario dos tópicos, mas não obtive sucesso.~ RESOLVIDO.
+* ~Coordenadas deixadas apenas nos comentarios não aparecem no aplicativo.~
+  * ~Não aparecem pois o aplicativo apenas pega o nome do tópico, descrição, autor e o horario(em Unix Timestamp).~
+  * ~Tentei de tudo para pegar o primeiro comentario dos tópicos, mas não obtive sucesso.~ RESOLVIDO.
 
 * A Lista não atualiza sozinha, sendo necessario abrir novamente o aplicativo.
   * Ainda estou aprendendo sobre react-native e tentarei melhorar isso.
