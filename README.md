@@ -1,26 +1,30 @@
-# pGO Sniper
+<h1 align="center">
+  <br>
+  pGO Sniper
+  <br>
+</h1>
 
-Aplicativo criado usando react-native para fins de aprendizado. O aplicativo se conecta na API do Reddit(usando o AXIOS) e pega os tópicos do subreddit /r/PokemonGoSniping/ e os organiza dentro de uma lista contendo o titulo do topico(IV/LEVEL  NOME DO POKEMON), autor do tópico, horario de criação, descrição do tópico e as coordenadas(junto a um botão de copiar).
+<h4 align="center">Aplicativo criado usando react-native para fins de aprendizado. O aplicativo se conecta na API do Reddit(usando o AXIOS) e pega os tópicos do subreddit /r/PokemonGoSniping/ e os organiza dentro de uma lista contendo o titulo do topico(IV/LEVEL  NOME DO POKEMON), autor do tópico, horario de criação, descrição do tópico e as coordenadas(junto a um botão de copiar).</h4>
 
 ![imagem](img.png?raw=true)
 
-## Propósito
+## 👊 Propósito
 
 Meu primeiro aplicativo criado usando react-native, a ideia principal de sua criação foi aprender mais sobre react-native e desenvolver na prática um aplicativo util para meus amigos e colegas "voadores", e junto divulgar mais o trabalho feito pelos usuarios do subreddit /r/PokemonGoSniping/.
 
 De uma olhada na parte "Informações" para mais detalhes do aplicativo.
 
-## Colabore
+## 👍 Colabore
 
 Colabore com o /r/PokemonGoSniping/
 
 Link: https://www.reddit.com/r/PokemonGoSniping/new/
 
-## Problemas Conhecidos
+## 📝 Problemas Conhecidos
 
-~* Coordenadas deixadas apenas nos comentarios não aparecem no aplicativo.
-  * Não aparecem pois o aplicativo apenas pega o nome do tópico, descrição, autor e o horario(em Unix Timestamp).
-  * Tentei de tudo para pegar o primeiro comentario dos tópicos, mas não obtive sucesso.~ RESOLVIDO.
+* ~Coordenadas deixadas apenas nos comentarios não aparecem no aplicativo.~
+  * ~Não aparecem pois o aplicativo apenas pega o nome do tópico, descrição, autor e o horario(em Unix Timestamp).~
+  * ~Tentei de tudo para pegar o primeiro comentario dos tópicos, mas não obtive sucesso.~ RESOLVIDO.
 
 * A Lista não atualiza sozinha, sendo necessario abrir novamente o aplicativo.
   * Ainda estou aprendendo sobre react-native e tentarei melhorar isso.
@@ -29,16 +33,16 @@ Link: https://www.reddit.com/r/PokemonGoSniping/new/
 * Pokemons que já sumiram (mais de 1 hora) continuam na lista.
   * Estou olhando uma forma de excluir da lista tópicos criados a mais de 1 hora.
 
-## Download
+## 💻 Download
 
-> Versão experimental
+> 🚩 Versão experimental
 
 Download: https://github.com/JNCJcoder/pGOSniper/releases
 
 * Android: Lançado.
 * iOS: Sem planos no momento.
 
-## Informações
+## 📝 Informações
 
 > Não consegui usar a ultima versão LTS do NodeJS, o aplicativo foi feito na versão v12.4.0 do NodeJS.
 
@@ -68,7 +72,7 @@ Download: https://github.com/JNCJcoder/pGOSniper/releases
   * Tema Claro/Escuro
   * Componentes (Flatlist)
 
-## Histórico de lançamentos
+## 📆 Histórico de lançamentos
 
 * 0.0.7
   * Leve Melhoria de Desempenho.
@@ -117,7 +121,7 @@ Download: https://github.com/JNCJcoder/pGOSniper/releases
 * 0.0.1
     * Versão experimental lançada.
 
-## Contribuindo
+## ♻️ Contribuindo
 
 1. Faça o _fork_ do projeto (<https://github.com/JNCJcoder/pGOSniper/fork>)
 2. Crie uma _branch_ para sua modificação (`git checkout -b feature/fooBar`)
