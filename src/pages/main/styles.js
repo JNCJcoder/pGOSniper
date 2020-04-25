@@ -29,19 +29,18 @@ const styles = StyleSheet.create({
     paddingTop: 5,
   },
   topicCoord: {
-    borderRadius: 0,
+    borderRadius: 15,
     borderWidth: 3,
     borderColor: '#F00',
     minWidth: '70%',
   },
   copyButton: {
-    flex: 1,
+    width: 100,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 1,
+    borderRadius: 15,
     borderWidth: 2,
     borderColor: '#F00',
-    maxWidth: 100,
   },
   copyButtonText: {
     color: '#F00',
@@ -57,6 +56,14 @@ const styles = StyleSheet.create({
   },
   rowContainer: {
     flexDirection: 'row',
+  },
+  light: {
+    backgroundColor: '#FAFAFA',
+    color: '#333',
+  },
+  dark: {
+    backgroundColor: '#1e1e1e',
+    color: '#a9a9a9',
   },
 });
 

@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
     maxWidth: '98%',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#FAFAFA',
   },
   tituloText: {
     fontSize: 32,
@@ -29,6 +28,14 @@ const styles = StyleSheet.create({
   },
   boldText: {
     fontWeight: 'bold',
+  },
+  light: {
+    backgroundColor: '#FAFAFA',
+    color: '#333',
+  },
+  dark: {
+    backgroundColor: '#1e1e1e',
+    color: '#fff',
   },
 });
 

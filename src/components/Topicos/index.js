@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import {
   View,
@@ -8,12 +9,10 @@ import {
   Clipboard,
 } from 'react-native';
 import NetInfo from '@react-native-community/netinfo';
-import AsyncStorage from '@react-native-community/async-storage';
-import { formatDistance, fromUnixTime } from 'date-fns';
+import { GuardarItem, PegarItem } from '../../util/AsyncStorage';
+import FormatDate from '../../util/FormatDate';
 import api from '../../config/Api';
-import PropTypes from 'prop-types';
 
-import pt from 'date-fns/locale/pt-BR';
 import styles from './styles';
 
 export default function Topicos(props) {
@@ -21,7 +20,7 @@ export default function Topicos(props) {
   const [children, setChildren] = useState([]);
 
   useEffect(() => {
-    NetInfo.fetch().then(state => {
+    NetInfo.fetch().then((state) => {
       if (state.isConnected) {
         loadTopics();
       } else {
@@ -31,7 +30,7 @@ export default function Topicos(props) {
   }, []);
 
   const loadStorage = async () => {
-    const response = JSON.parse(await AsyncStorage.getItem('@topics'));
+    const response = JSON.parse(await PegarItem('@topics'));
 
     const { children } = response.data.data;
 
@@ -46,53 +45,45 @@ export default function Topicos(props) {
     );
 
     for (let index = 0; index < response.data.data.children.length; index++) {
-      await api.get(
-        `${response.data.data.children[index].data.permalink}.json?sort=old&limit=1`,
-      ).then(res => {
-        response.data.data.children[index].data.selftext_html = res.data[1].data.children[0].data.body;
-      })
-      .catch(error => {
-        response.data.data.children[index].data.selftext_html = "Erro ao pegar coordenadas";
-      });
+      await api
+        .get(
+          `${response.data.data.children[index].data.permalink}.json?sort=old&limit=1`,
+        )
+        .then((res) => {
+          response.data.data.children[index].data.selftext_html =
+            res.data[1].data.children[0].data.body;
+        })
+        .catch((error) => {
+          response.data.data.children[index].data.selftext_html =
+            'Erro ao pegar coordenadas';
+        });
+      response.data.data.children[index].data.approved_at_utc = FormatDate(
+        response.data.data.children[index].data.created_utc,
+        hournow,
+      );
     }
 
     const { children } = response.data.data;
-    await AsyncStorage.setItem('@topics', JSON.stringify(response));
+    await GuardarItem('@topics', JSON.stringify(response));
 
     setChildren(children);
   };
 
   const renderItem = ({ item }) => (
-    <View
-      style={[styles.topicContainer, { backgroundColor: props.corPrimaria }]}>
-      <Text
-        style={[
-          styles.fs18Text,
-          styles.boldText,
-          { color: props.corQuaternaria },
-        ]}>
+    <View style={[styles.topicContainer, styles[props.theme]]}>
+      <Text style={[styles.fs18Text, styles.boldText, styles[props.theme]]}>
         {item.data.title}
       </Text>
       <View style={styles.rowContainer}>
-        <Text style={[styles.topicAuthor, { color: props.corQuaternaria }]}>
+        <Text style={[styles.topicAuthor, styles[props.theme]]}>
           Publicado por: {item.data.author}{' '}
         </Text>
-        <Text style={[styles.topicAuthor, { color: props.corQuaternaria }]}>
-          a{' '}
-          {formatDistance(
-            new Date(fromUnixTime(item.data.created_utc)),
-            hournow,
-            { locale: pt },
-          )}{' '}
-          atrás
+        <Text style={[styles.topicAuthor, styles[props.theme]]}>
+          a {item.data.approved_at_utc} atrás
         </Text>
       </View>
       <Text
-        style={[
-          styles.topicDescription,
-          styles.fs16Text,
-          { color: props.corTerciaria },
-        ]}>
+        style={[styles.topicDescription, styles.fs16Text, styles[props.theme]]}>
         {item.data.selftext}
       </Text>
       <View style={[styles.coordsContainer, styles.rowContainer]}>
@@ -101,7 +92,7 @@ export default function Topicos(props) {
             styles.topicCoord,
             styles.fs18Text,
             styles.boldText,
-            { color: props.corSecundaria },
+            styles[props.theme],
           ]}>
           {item.data.selftext_html}
         </TextInput>
@@ -120,24 +111,13 @@ export default function Topicos(props) {
     </View>
   );
 
-  if (!children) {
-    return null;
-  }
+  if (!children) return null;
 
   return (
     <FlatList
       data={children}
-      keyExtractor={item => String(item.data.created_utc)}
+      keyExtractor={(item) => String(item.data.created_utc)}
       renderItem={renderItem}
     />
   );
 }
-
-Topicos.propTypes = {
-  corPrimaria: PropTypes.string.isRequired,
-  corSecundaria: PropTypes.string.isRequired,
-  corTerciaria: PropTypes.string.isRequired,
-  corQuaternaria: PropTypes.string.isRequired,
-  item: PropTypes.array,
-
-};
