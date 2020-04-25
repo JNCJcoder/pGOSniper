@@ -6,6 +6,11 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     paddingHorizontal: 10,
   },
+  containerLoading: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: 10,
+  },
   sobreText: {
     color: '#FFF',
   },
@@ -27,21 +32,23 @@ const styles = StyleSheet.create({
   coordsContainer: {
     justifyContent: 'center',
     paddingTop: 5,
+    paddingHorizontal: 35,
   },
   topicCoord: {
-    borderRadius: 0,
+    borderRadius: 15,
     borderWidth: 3,
     borderColor: '#F00',
     minWidth: '70%',
+    maxHeight: 50,
   },
   copyButton: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 1,
+    borderRadius: 15,
     borderWidth: 2,
     borderColor: '#F00',
-    maxWidth: 100,
+    minWidth: 80,
+    maxHeight: 50,
   },
   copyButtonText: {
     color: '#F00',
@@ -57,6 +64,15 @@ const styles = StyleSheet.create({
   },
   rowContainer: {
     flexDirection: 'row',
+  },
+  // Themes
+  light: {
+    backgroundColor: '#FFF',
+    color: '#000',
+  },
+  dark: {
+    backgroundColor: '#151515',
+    color: '#7a7a7a',
   },
 });
 
