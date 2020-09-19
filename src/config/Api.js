@@ -1,8 +1,22 @@
-import axios from 'axios';
+import axios from "axios";
+import useSWR from "swr";
 
-const api = axios.create({
-    baseURL: 'https://www.reddit.com',
+export const apiAxios = axios.create({
+  baseURL: "https://www.reddit.com",
 });
-  
-export default api;
-  
+
+const Fetcher = async (url) => {
+  const response = await apiAxios.get(url);
+  const data = response;
+
+  return data;
+};
+
+export function useApi(url) {
+  const { data, error } = useSWR(url, Fetcher, {
+    revalidateOnFocus: true,
+    revalidateOnReconnect: true,
+  });
+
+  return { data, error };
+}

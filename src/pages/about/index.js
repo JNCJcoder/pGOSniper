@@ -1,7 +1,7 @@
-import React from 'react';
-import { View, Text, Linking, useColorScheme } from 'react-native';
+import React from "react";
+import { View, Text, Linking, useColorScheme } from "react-native";
 
-import styles from './styles';
+import styles from "./styles";
 
 const About = () => {
   const defaultTheme = useColorScheme();
@@ -10,11 +10,12 @@ const About = () => {
     <View style={[styles.container, styles[defaultTheme]]}>
       <View>
         <Text
-          style={[styles.tituloText, styles.boldText, styles[defaultTheme]]}>
+          style={[styles.tituloText, styles.boldText, styles[defaultTheme]]}
+        >
           pGO Sniper
         </Text>
         <Text style={[styles.infoText, styles[defaultTheme]]}>
-          Versão 0.0.8
+          Versão 1.0.0
         </Text>
       </View>
       <View style={[styles.infoContainer, styles[defaultTheme]]}>
@@ -24,8 +25,8 @@ const About = () => {
         <Text
           style={[styles.subredditText, styles.boldText]}
           onPress={() =>
-            Linking.openURL('https://www.reddit.com/r/PokemonGoSniping')
-          }>
+            Linking.openURL("https://www.reddit.com/r/PokemonGoSniping")}
+        >
           /r/PokemonGoSniping
         </Text>
         <Text />
