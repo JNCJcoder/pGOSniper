@@ -27,7 +27,7 @@ Link: https://www.reddit.com/r/PokemonGoSniping/new/
   - ~Não aparecem pois o aplicativo apenas pega o nome do tópico, descrição, autor e o horario(em Unix Timestamp).~
   - ~Tentei de tudo para pegar o primeiro comentario dos tópicos, mas não obtive sucesso.~ RESOLVIDO.
 
-- A Lista não atualiza sozinha, sendo necessario abrir novamente o aplicativo.
+- ~A Lista não atualiza sozinha, sendo necessario abrir novamente o aplicativo.~
 
   - Ainda estou aprendendo sobre react-native e tentarei melhorar isso.
   - ~Porem o Horario de criação dos tópicos e atualizada de 1 em 1 minuto.~
@@ -61,7 +61,8 @@ Download: https://github.com/drawciamage/pGOSniper/releases
   - react-navigation-stack
   - react-native-gesture-handler
   - @react-native-community/async-storage
-  - @react-native-community/netinfo
+  - ~@react-native-community/netinfo~
+  - SWR
 
 - Foi usado:
   - AJAX
@@ -74,6 +75,13 @@ Download: https://github.com/drawciamage/pGOSniper/releases
   - Componentes (Flatlist)
 
 ## 📆 Histórico de lançamentos
+
+
+- 1.0.0
+  - "@react-native-community/netinfo" Removido.
+  - Adicionado SWR.
+  - Guardando Darktheme e Firsttime em um mesmo objeto.
+  - Codigo refatorado.
 
 - 0.0.8
 
