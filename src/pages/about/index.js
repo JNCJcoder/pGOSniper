@@ -3,7 +3,11 @@ import { View, Text, Linking, useColorScheme } from "react-native";
 
 import styles from "./styles";
 
-const About = () => {
+const About = ({ navigation }) => {
+  navigation.setOptions({
+    title: "Sobre",
+  });
+
   const defaultTheme = useColorScheme();
 
   return (
@@ -15,12 +19,12 @@ const About = () => {
           pGO Sniper
         </Text>
         <Text style={[styles.infoText, styles[defaultTheme]]}>
-          Versão 1.0.0
+          Versão 1.0.1
         </Text>
       </View>
       <View style={[styles.infoContainer, styles[defaultTheme]]}>
         <Text style={[styles.infoText, styles[defaultTheme]]}>
-          Coordenadas conseguidas nos tópicos do subreddit:
+          Coordenadas obtidas nos tópicos do subreddit:
         </Text>
         <Text
           style={[styles.subredditText, styles.boldText]}
@@ -40,7 +44,7 @@ const About = () => {
           Criado com React Native.
         </Text>
         <Text style={[styles.fs16Text, styles.boldText, styles[defaultTheme]]}>
-          Aplicativo criado para fins de Aprendizado.
+          Aplicativo criado para fins de aprendizado.
         </Text>
       </View>
     </View>

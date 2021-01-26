@@ -4,15 +4,24 @@
   <br>
 </h1>
 
-<h4 align="center">Aplicativo criado usando react-native para fins de aprendizado. O aplicativo se conecta na API do Reddit(usando o AXIOS) e pega os tópicos do subreddit /r/PokemonGoSniping/ e os organiza dentro de uma lista contendo o titulo do topico(IV/LEVEL  NOME DO POKEMON), autor do tópico, horario de criação, descrição do tópico e as coordenadas(junto a um botão de copiar).</h4>
+<h4 align="center">Aplicativo desenvolvido com React Native com fins de aprendizado. Ele se conecta à API do Reddit (usando Axios) para exibir os tópicos do subreddit /r/PokemonGoSniping/.
+</h4>
 
 ![imagem](.github/img.png?raw=true)
 
+O aplicativo organiza os posts em uma lista detalhada, cada tópico tendo:
+
+- Título (formato: `IV/LEVEL NOME_DO_POKEMON`)
+- Autor do post
+- Horário de criação
+- Descrição do tópico
+- Coordenadas(formato: `LAT, LNG`), com um botão para copiar rapidamente
+
 ## 👊 Propósito
 
-Meu primeiro aplicativo criado usando react-native, a ideia principal de sua criação foi aprender mais sobre react-native e desenvolver na prática um aplicativo util para meus amigos e colegas "voadores", e junto divulgar mais o trabalho feito pelos usuarios do subreddit /r/PokemonGoSniping/.
+Este foi o meu primeiro aplicativo desenvolvido com React Native. O principal objetivo do projeto foi aprofundar meus conhecimentos na tecnologia por meio da prática, ao mesmo tempo em que criava uma ferramenta útil para meus amigos e colegas "voadores".
 
-De uma olhada na parte "Informações" para mais detalhes do aplicativo.
+Para mais detalhes do aplicativo, consulte a seção "Informações".
 
 ## 👍 Colabore
 
@@ -36,8 +45,6 @@ Link: https://www.reddit.com/r/PokemonGoSniping/new/
   - Estou olhando uma forma de excluir da lista tópicos criados a mais de 1 hora.
 
 ## 💻 Download
-
-> 🚩 Versão experimental
 
 Download: https://github.com/JNCJcoder/pGOSniper/releases
 
@@ -76,12 +83,22 @@ Download: https://github.com/JNCJcoder/pGOSniper/releases
 
 ## 📆 Histórico de lançamentos
 
+- 1.0.1
+  - getTopics Refatorado.
+  - Opções do ReactNavigation Arrumadas.
+  - Novas cores no Dark e Light mode.
+  - Textos do README.md melhorados(e com imagem do novo design)
+  - Nova Tentativa de organizar o codigo. :)
 
 - 1.0.0
   - "@react-native-community/netinfo" Removido.
   - Adicionado SWR.
   - Guardando Darktheme e Firsttime em um mesmo objeto.
   - Codigo refatorado.
+
+</br>
+<details>
+  <summary>Versões Experimentais</summary>
 
 - 0.0.8
 
@@ -146,6 +163,9 @@ Download: https://github.com/JNCJcoder/pGOSniper/releases
 
 - 0.0.1
   - Versão experimental lançada.
+
+</details>
+</br>
 
 ## ♻️ Contribuindo
 

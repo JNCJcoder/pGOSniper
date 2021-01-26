@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { TouchableOpacity, Text, BackHandler } from "react-native";
+import { BackHandler } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -27,28 +27,8 @@ export default function RotaInicial() {
           fontWeight: "bold",
         }}
       >
-        <Stack.Screen
-          name="Home"
-          component={Main}
-          options={({ navigation }) => ({
-            title: "pGO Sniper",
-            // eslint-disable-next-line react/display-name
-            headerRight: () => (
-              <TouchableOpacity onPress={() => navigation.navigate("About")}>
-                <Text style={{ fontWeight: "bold", color: "#FFF", right: 7 }}>
-                  Sobre
-                </Text>
-              </TouchableOpacity>
-            ),
-          })}
-        />
-        <Stack.Screen
-          name="About"
-          component={About}
-          options={{
-            title: "Sobre",
-          }}
-        />
+        <Stack.Screen name="Home" component={Main} />
+        <Stack.Screen name="About" component={About} />
       </Stack.Navigator>
     </NavigationContainer>
   );

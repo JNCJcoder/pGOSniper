@@ -28,12 +28,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   light: {
-    backgroundColor: "#FAFAFA",
-    color: "#333",
+    backgroundColor: '#F5F5F5',
+    color: '#212121',
   },
   dark: {
-    backgroundColor: "#1e1e1e",
-    color: "#fff",
+    backgroundColor: '#121212',
+    color: '#E0E0E0',
   },
 });
 

@@ -1,4 +1,4 @@
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from "@react-native-community/async-storage";
 
 export const GuardarItem = async (token, data) => {
   try {
@@ -11,6 +11,7 @@ export const GuardarItem = async (token, data) => {
 export const PegarItem = async (token) => {
   try {
     const value = await AsyncStorage.getItem(token);
+
     return value;
   } catch (e) {
     console.log(e);

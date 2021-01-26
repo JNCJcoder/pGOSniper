@@ -15,11 +15,16 @@ const styles = StyleSheet.create({
     color: '#FFF',
   },
   topicContainer: {
-    borderRadius: 5,
+    borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#DDD',
+    borderColor: 'transparent',
     padding: 15,
-    marginBottom: 15,
+    marginTop: 15,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 2
   },
   topicAuthor: {
     fontSize: 12,
@@ -28,6 +33,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 5,
     lineHeight: 24,
+    padding: 25,
   },
   coordsContainer: {
     justifyContent: 'center',
@@ -35,23 +41,30 @@ const styles = StyleSheet.create({
     paddingHorizontal: 35,
   },
   topicCoord: {
-    borderRadius: 15,
+    borderRadius: 12,
     borderWidth: 3,
+    borderTopRightRadius: 0,
+    borderBottomRightRadius: 0,
     borderColor: '#F00',
     minWidth: '70%',
     maxHeight: 50,
+    paddingHorizontal: 15,
   },
   copyButton: {
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 15,
+    borderRadius: 12,
     borderWidth: 2,
+    borderLeftWidth: 0,
+    borderTopLeftRadius: 0,
+    borderBottomLeftRadius: 0,
     borderColor: '#F00',
+    backgroundColor: '#F00',
     minWidth: 80,
     maxHeight: 50,
   },
   copyButtonText: {
-    color: '#F00',
+    color: '#FFF',
   },
   boldText: {
     fontWeight: 'bold',
@@ -67,12 +80,12 @@ const styles = StyleSheet.create({
   },
   // Themes
   light: {
-    backgroundColor: '#FFF',
-    color: '#000',
+    backgroundColor: '#FFFFFF',
+    color: '#212121',
   },
   dark: {
-    backgroundColor: '#151515',
-    color: '#7a7a7a',
+    backgroundColor: '#1E1E1E',
+    color: '#E0E0E0',
   },
 });
 

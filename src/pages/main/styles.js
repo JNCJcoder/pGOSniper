@@ -58,12 +58,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   light: {
-    backgroundColor: '#FAFAFA',
-    color: '#333',
+    backgroundColor: '#F5F5F5',
+    color: '#212121',
   },
   dark: {
-    backgroundColor: '#1e1e1e',
-    color: '#a9a9a9',
+    backgroundColor: '#121212',
+    color: '#E0E0E0',
   },
 });
 
