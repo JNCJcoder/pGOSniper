@@ -7,7 +7,9 @@
 <h4 align="center">Aplicativo desenvolvido com React Native com fins de aprendizado. Ele se conecta à API do Reddit (usando Axios) para exibir os tópicos do subreddit /r/PokemonGoSniping/.
 </h4>
 
-![imagem](.github/img.png?raw=true)
+<div align="center">
+<img src="./.github/img.webp" style="width:500px">
+</div>
 
 O aplicativo organiza os posts em uma lista detalhada, cada tópico tendo:
 
